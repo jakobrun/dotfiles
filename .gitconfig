@@ -68,8 +68,6 @@
 [url "git://gist.github.com/"]
 	insteadOf = "gist:"
 
-[push]
-	default = simple
 [user]
 	name = jakobrun
 	email = jakob.runarsson@gmail.com
