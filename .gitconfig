@@ -24,3 +24,5 @@
 [user]
 	name = jakob
 	email = jakob.runarsson@gmail.com
+[push]
+	default = simple
