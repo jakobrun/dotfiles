@@ -48,3 +48,9 @@ function extract() {
 		echo "'$1' is not a valid file"
 	fi
 }
+
+
+#flush dns
+function flushDns() {
+	sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder
+}
