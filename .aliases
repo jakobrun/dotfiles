@@ -13,7 +13,7 @@ alias v="vim"
 alias s="subl ."
 alias a="atom ."
 alias r="npm run"
-alias c ="code ."
+alias c="code ."
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
