@@ -22,7 +22,7 @@
 	pushInsteadOf = "git://github.com/"
 
 [user]
-	name = jakob
-	email = jakob.runarsson@gmail.com
+	name = olafurtorfi
+	email = olafurtorfi@gmail.com
 [push]
 	default = simple
