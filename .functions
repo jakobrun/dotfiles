@@ -58,3 +58,11 @@ function flushDns() {
 # code . -- opens current directory in Visual Studio Code
 # code somefile -- opens somefile in Visual Studio Code
 code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
+
+function switchToDev() {
+	cp ~/.kube/config.dev ~/.kube/config
+}
+
+function switchToProd() {
+	cp ~/.kube/config.live ~/.kube/config
+}
