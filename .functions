@@ -66,3 +66,8 @@ function switchToDev() {
 function switchToProd() {
 	cp ~/.kube/config.live ~/.kube/config
 }
+
+function refreshHosts() {
+	networksetup -setdnsservers "Thunderbolt Bridge" 8.8.8.8 8.8.4.4
+	dscacheutil -flushcache; sudo killall -HUP mDNSResponder
+}
