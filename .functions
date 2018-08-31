@@ -67,6 +67,13 @@ function switchToProd() {
 	cp ~/.kube/config.live ~/.kube/config
 }
 
+function cleanNPM() {
+	rm package-lock.json
+	rm node-modules
+	npm update
+	npm i
+}
+
 function refreshHosts() {
 	networksetup -setdnsservers "Thunderbolt Bridge" 8.8.8.8 8.8.4.4
 	dscacheutil -flushcache; sudo killall -HUP mDNSResponder
