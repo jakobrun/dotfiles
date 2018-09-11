@@ -2,7 +2,7 @@
 cd "$(dirname "${BASH_SOURCE}")"
 git pull
 function doIt() {
-	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "README.md" -av . ~
+	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "README.md" --exclude "snippetSymlink.sh" -av . ~
 }
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
 	doIt
@@ -15,3 +15,7 @@ else
 fi
 unset doIt
 source ~/.bash_profile
+
+./snippetSymlink.sh
+
+echo Remember to copy you environment variables into .profile

@@ -9,7 +9,7 @@ ZSH_THEME="random"
 
 #use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
- HYPHEN_INSENSITIVE="true"
+HYPHEN_INSENSITIVE="true"
 
 #enable command auto-correction.
 ENABLE_CORRECTION="true"
@@ -25,13 +25,12 @@ plugins=(git)
 
 
 # use custom dotfiles
-for file in ~/.{exports,aliases,functions}; do
+for file in ~/.{exports,aliases,functions,profile,path}; do
 	[ -r "$file" ] && source "$file"
 done
 unset file
 
 source $ZSH/oh-my-zsh.sh
-source ~/.profile
 
 # activate python2.7 environment via anaconda
 # source activate py27
