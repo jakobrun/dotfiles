@@ -85,7 +85,6 @@ function batchChangeFileEndings() {
 	echo What would you like to replace it with
 	read newending
 	list=$(ls | grep $oldending)
-	echo $list
 	for a in $list
 	do
 		substring=$(echo $a| cut -d "." -f 1)
@@ -93,5 +92,19 @@ function batchChangeFileEndings() {
 		new=$(echo $substring$newending)
 		echo moving $old to $new
 		mv $old $new
+	done
+}
+
+function batchAppendStringToEndOfFile() {
+	echo What string would you like to append
+	read appendstr
+	echo To files with which ending, would you like to append it to
+	read ending
+	list=$(ls | grep $ending)
+	for a in $list
+	do
+		# substring=$(echo $a| cut -d "." -f 1)
+		newfile=$(echo $(cat $a)$appendstr)
+		echo $newfile > $a
 	done
 }
