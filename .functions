@@ -78,3 +78,20 @@ function refreshHosts() {
 	networksetup -setdnsservers "Thunderbolt Bridge" 8.8.8.8 8.8.4.4
 	dscacheutil -flushcache; sudo killall -HUP mDNSResponder
 }
+
+function batchChangeFileEndings() {
+	echo What endings do you want to have moved
+	read oldending
+	echo What would you like to replace it with
+	read newending
+	list=$(ls | grep $oldending)
+	echo $list
+	for a in $list
+	do
+		substring=$(echo $a| cut -d "." -f 1)
+		old=$(echo $substring$oldending)
+		new=$(echo $substring$newending)
+		echo moving $old to $new
+		mv $old $new
+	done
+}
