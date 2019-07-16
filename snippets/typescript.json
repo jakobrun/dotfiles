@@ -1,44 +1,63 @@
 {
-    /*
+  /*
     	// Place your snippets for TypeScript here. Each snippet is defined under a snippet name and has a prefix, body and 
     	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
     	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
     	// same ids are connected.
     	// Example:
     */
-    "Print to console": {
-        "prefix": "conlog",
-        "body": [
-            "console.log('Debug $1: ', $1)$2"
-        ],
-        "description": "Log output to console"
-    },
-    "promise resolution handler": {
-        "prefix": "then",
-        "body": [
-            "then(($1)=>{$2})"
-        ],
-        "description": "Log output to console"
-    },
-    "describe a test suit": {
-        "prefix": "desc",
-        "body": [
-            "describe('$1 test', ()=>{\n$2\n})"
-        ],
-        "description": "describe a test suit"
-    },
-    "before each test case": {
-        "prefix": "befo",
-        "body": [
-            "beforeEach(()=>{\n$1\n})"
-        ],
-        "description": "before each test case"
-    },
-    "test case": {
-        "prefix": "it",
-        "body": [
-            "it('should $1', ()=>{\n$2\n})"
-        ],
-        "description": "test case"
-    }
+  "Print to console": {
+    "prefix": "conlog",
+    "body": ["console.log('Debug $1')$2"],
+    "description": "Log output to console"
+  },
+  "Debug to console": {
+    "prefix": "debug",
+    "body": ["console.log('Debug $1: ', $1)$2"],
+    "description": "Log output to console"
+  },
+  "Debug to console with autofill": {
+    "prefix": "cl",
+    "body": ["console.log('Debug $1: ', $2)"],
+    "description": "Debug to console with autofill"
+  },
+  "Map value": {
+    "prefix": "maplog",
+    "body": [
+      "console.log('Debug property of $1:', $1.map(obj=>obj.$2).join('$3'))"
+    ],
+    "description": "log property of objects in array"
+  },
+  "promise resolution handler": {
+    "prefix": "then",
+    "body": ["then(($1)=>{$2})"],
+    "description": "promise resolution handler"
+  },
+  "catch error handler": {
+    "prefix": "catchd",
+    "body": ["catch((err)=>{console.log('Debug error from promise: ', err}))"],
+    "description": "catch error handler"
+  },
+  "debug promise resolution": {
+    "prefix": "promisedebug",
+    "body": [
+      ".then((res)=>{console.log('Debug promise resolved with: ', res);return res}).catch((err)=>{console.log('Debug error from promise: ', err)})"
+    ],
+    "description": "debug promise resolution"
+  },
+  "describe a test suit": {
+    "prefix": "desc",
+    "body": ["describe('$1 test', ()=>{\n$2\n})"],
+    "description": "describe a test suit"
+  },
+  "before each test case": {
+    "prefix": "befo",
+    "body": ["beforeEach(()=>{\n$1\n})"],
+    "description": "before each test case"
+  },
+  "test case": {
+    "prefix": "it",
+    "body": ["it('should $1', ()=>{\n$2\n})"],
+    "description": "test case"
+  }
 }

@@ -1,7 +1,24 @@
 {
   "Print to console": {
     "prefix": "conlog",
+    "body": ["console.log('Debug $1')$2"],
+    "description": "Log output to console"
+  },
+  "Debug to console": {
+    "prefix": "debug",
     "body": ["console.log('Debug $1: ', $1)$2"],
     "description": "Log output to console"
+  },
+  "Debug to console with autofill": {
+    "prefix": "cl",
+    "body": ["console.log('Debug $1: ', $2)"],
+    "description": "Debug to console with autofill"
+  },
+  "Map value": {
+    "prefix": "maplog",
+    "body": [
+      "console.log('Debug property of $1:', $1.map(obj=>obj.$2).join('$3'))"
+    ],
+    "description": "log property of objects in array"
   }
 }
