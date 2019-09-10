@@ -4,7 +4,8 @@ export ZSH=~/.oh-my-zsh
 
 # ZSH_THEME="robbyrussell"
 # ZSH_THEME=sunrise
-ZSH_THEME="random"
+# ZSH_THEME="random"
+ZSH_THEME="jonathan"
 
 
 #use hyphen-insensitive completion. Case
@@ -32,8 +33,6 @@ unset file
 
 source $ZSH/oh-my-zsh.sh
 
-# activate python2.7 environment via anaconda
-# source activate py27
 
 # Preferred editor for local and remote sessions
  if [[ -n $SSH_CONNECTION ]]; then
@@ -47,3 +46,6 @@ plugins=(git brew npm docker kubectl)
 source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh  
 
 . `brew --prefix`/etc/profile.d/z.sh
+
+## this line is just activating a anaconda environment using python version 2.7... it should be taken out, and will be taken out on my next computer :P
+condaPython27Env

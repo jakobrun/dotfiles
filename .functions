@@ -108,3 +108,13 @@ function batchAppendStringToEndOfFile() {
 		echo $newfile > $a
 	done
 }
+
+## this function is just activating a anaconda environment... it should be taken out, and will be taken out on my next computer :P
+function condaPython27Env() {
+	source activate py27
+}
+
+## this function is just activating a anaconda environment... it should be taken out, and will be taken out on my next computer :P
+function condaPython36Env() {
+	source activate py36
+}
