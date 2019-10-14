@@ -7,5 +7,9 @@
     {
         "key": "ctrl+n",
         "command": "workbench.action.terminal.focusNext"
+    },
+    {
+        "key": "shift+cmd+r",
+        "command": "workbench.files.action.refreshFilesExplorer"
     }
 ]

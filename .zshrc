@@ -5,7 +5,7 @@ export ZSH=~/.oh-my-zsh
 # ZSH_THEME="robbyrussell"
 # ZSH_THEME=sunrise
 # ZSH_THEME="random"
-ZSH_THEME="jonathan"
+ZSH_THEME="candy"
 
 
 #use hyphen-insensitive completion. Case
@@ -13,7 +13,7 @@ ZSH_THEME="jonathan"
 HYPHEN_INSENSITIVE="true"
 
 #enable command auto-correction.
-ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="false"
 
 #display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
