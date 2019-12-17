@@ -26,6 +26,11 @@
         "body": ["then(($1)=>{$2})"],
         "description": "promise resolution handler"
     },
+    "promise resolution handler2": {
+        "prefix": ".th",
+        "body": ["then(($1)=>{$2})"],
+        "description": "promise resolution handler"
+    },
     "catch error handler": {
         "prefix": "catchd",
         "body": [

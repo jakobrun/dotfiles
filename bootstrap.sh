@@ -16,6 +16,6 @@ fi
 unset doIt
 source ~/.bash_profile
 
-./snippetSymlink.sh
+./vscodeSymlinksMac.sh
 
 echo Remember to copy you environment variables into .profile

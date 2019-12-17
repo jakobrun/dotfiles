@@ -48,4 +48,7 @@ source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 . `brew --prefix`/etc/profile.d/z.sh
 
 ## this line is just activating a anaconda environment using python version 2.7... it should be taken out, and will be taken out on my next computer :P
-condaPython27Env
+py27
+
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm

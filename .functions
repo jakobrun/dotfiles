@@ -110,11 +110,30 @@ function batchAppendStringToEndOfFile() {
 }
 
 ## this function is just activating a anaconda environment... it should be taken out, and will be taken out on my next computer :P
-function condaPython27Env() {
+function py27() {
 	source activate py27
 }
 
 ## this function is just activating a anaconda environment... it should be taken out, and will be taken out on my next computer :P
-function condaPython36Env() {
+function py36() {
 	source activate py36
+}
+
+function kubepods() {
+	kubectl get pods | grep $1
+}
+
+function killProcessOnPort() { 
+	processonport=$(lsof -i tcp:$1 | grep LISTEN | awk '{ print $2 }')
+	echo killing process $processonport which is taking up port $1
+	kill -9 $processonport 
+}
+
+function decode() {
+	# Works on OS X, otherwise consider xclip instead of pbcopy
+	echo $1 | base64 --decode | pbcopy
+}
+
+function kubesecret(){
+	kubectl get secret $1 -o yaml
 }
