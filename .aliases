@@ -52,4 +52,4 @@ alias yi="yarn install"
 alias ya="yarn add"
 
 # git
-alias gitpushupstream="git push --set-upstream origin $(git branch --show-current)"
+alias gpup="git push --set-upstream origin $(git branch --show-current)"
