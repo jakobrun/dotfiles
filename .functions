@@ -129,6 +129,7 @@ function killProcessOnPort() {
 	kill -9 $processonport 
 }
 
+# decode base64 encoded string and copy it to clipboard
 function decode() {
 	# Works on OS X, otherwise consider xclip instead of pbcopy
 	echo $1 | base64 --decode | pbcopy

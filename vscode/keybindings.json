@@ -11,5 +11,14 @@
     {
         "key": "shift+cmd+r",
         "command": "workbench.files.action.refreshFilesExplorer"
+    },
+    {
+        "key": "ctrl+cmd+t",
+        "command": "workbench.action.terminal.newInActiveWorkspace",
+        "when": "focusTerminal"
+    },
+    {
+        "key": "ctrl+cmd+n",
+        "command": "workbench.action.terminal.new"
     }
 ]
