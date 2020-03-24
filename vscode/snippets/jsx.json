@@ -1,0 +1,7 @@
+{
+    "Print to console": {
+        "prefix": "conlog",
+        "body": ["console.log('Debug $1: ', $1);$2"],
+        "description": "Log output to console"
+    }
+}

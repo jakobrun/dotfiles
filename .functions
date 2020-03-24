@@ -58,3 +58,83 @@ function flushDns() {
 # code . -- opens current directory in Visual Studio Code
 # code somefile -- opens somefile in Visual Studio Code
 code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
+
+function switchToDev() {
+	cp ~/.kube/config.dev ~/.kube/config
+}
+
+function switchToProd() {
+	cp ~/.kube/config.live ~/.kube/config
+}
+
+function cleanNPM() {
+	rm package-lock.json
+	rm -rf node-modules
+	npm update
+	npm i
+}
+
+function refreshHosts() {
+	networksetup -setdnsservers "Thunderbolt Bridge" 8.8.8.8 8.8.4.4
+	dscacheutil -flushcache; sudo killall -HUP mDNSResponder
+}
+
+function batchChangeFileEndings() {
+	echo What endings do you want to have moved
+	read oldending
+	echo What would you like to replace it with
+	read newending
+	list=$(ls | grep $oldending)
+	for a in $list
+	do
+		substring=$(echo $a| cut -d "." -f 1)
+		old=$(echo $substring$oldending)
+		new=$(echo $substring$newending)
+		echo moving $old to $new
+		mv $old $new
+	done
+}
+
+function batchAppendStringToEndOfFile() {
+	echo What string would you like to append
+	read appendstr
+	echo To files with which ending, would you like to append it to
+	read ending
+	list=$(ls | grep $ending)
+	for a in $list
+	do
+		# substring=$(echo $a| cut -d "." -f 1)
+		newfile=$(echo $(cat $a)$appendstr)
+		echo $newfile > $a
+	done
+}
+
+## this function is just activating a anaconda environment... it should be taken out, and will be taken out on my next computer :P
+function py27() {
+	source activate py27
+}
+
+## this function is just activating a anaconda environment... it should be taken out, and will be taken out on my next computer :P
+function py36() {
+	source activate py36
+}
+
+function kubepods() {
+	kubectl get pods | grep $1
+}
+
+function killProcessOnPort() { 
+	processonport=$(lsof -i tcp:$1 | grep LISTEN | awk '{ print $2 }')
+	echo killing process $processonport which is taking up port $1
+	kill -9 $processonport 
+}
+
+# decode base64 encoded string and copy it to clipboard
+function decode() {
+	# Works on OS X, otherwise consider xclip instead of pbcopy
+	echo $1 | base64 --decode | pbcopy
+}
+
+function kubesecret(){
+	kubectl get secret $1 -o yaml
+}

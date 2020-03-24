@@ -13,6 +13,7 @@ alias v="vim"
 alias s="subl ."
 alias a="atom ."
 alias r="npm run"
+alias c="code ."
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -45,3 +46,10 @@ alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+
 # View HTTP traffic
 alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
 alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
+
+# Yarn
+alias yi="yarn install"
+alias ya="yarn add"
+
+# git
+alias gpup="git push --set-upstream origin $(git branch --show-current)"

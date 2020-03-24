@@ -1,3 +1,3 @@
-# Jakob’s dotfiles
+# OlafurTorfi’s dotfiles
 
-Forked from [mathias's dotfiles](https://github.com/mathiasbynens/dotfiles/)
+Forked from [jakob's dotfiles](https://github.com/jakobrun/dotfiles/)

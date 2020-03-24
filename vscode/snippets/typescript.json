@@ -1,0 +1,63 @@
+{
+    "Print to console": {
+        "prefix": "conlog",
+        "body": ["console.log('Debug $1')$2"],
+        "description": "Log output to console"
+    },
+    "Debug to console": {
+        "prefix": "debug",
+        "body": ["console.log('Debug $1: ', $1)$2"],
+        "description": "Log output to console"
+    },
+    "Debug to console with autofill": {
+        "prefix": "cl",
+        "body": ["console.log('Debug $1: ', $2)"],
+        "description": "Debug to console with autofill"
+    },
+    "Map value": {
+        "prefix": "maplog",
+        "body": [
+            "console.log('Debug property of $1:', $1.map(obj=>obj.$2).join('$3'))"
+        ],
+        "description": "log property of objects in array"
+    },
+    "promise resolution handler": {
+        "prefix": "then",
+        "body": ["then(($1)=>{$2})"],
+        "description": "promise resolution handler"
+    },
+    "promise resolution handler2": {
+        "prefix": ".th",
+        "body": ["then(($1)=>{$2})"],
+        "description": "promise resolution handler"
+    },
+    "catch error handler": {
+        "prefix": "catchd",
+        "body": [
+            "catch((err)=>{console.log('Debug error from promise: ', err)})"
+        ],
+        "description": "catch error handler"
+    },
+    "debug promise resolution": {
+        "prefix": "promisedebug",
+        "body": [
+            ".then((res)=>{console.log('Debug promise resolved with: ', res);return res}).catch((err)=>{console.log('Debug error from promise: ', err);throw err})"
+        ],
+        "description": "debug promise resolution"
+    },
+    "describe a test suit": {
+        "prefix": "desc",
+        "body": ["describe('$1 test', ()=>{\n$2\n})"],
+        "description": "describe a test suit"
+    },
+    "before each test case": {
+        "prefix": "befo",
+        "body": ["beforeEach(()=>{\n$1\n})"],
+        "description": "before each test case"
+    },
+    "test case": {
+        "prefix": "it",
+        "body": ["it('should $1', ()=>{\n$2\n})"],
+        "description": "test case"
+    }
+}

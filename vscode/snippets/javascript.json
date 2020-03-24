@@ -1,0 +1,24 @@
+{
+    "Print to console": {
+        "prefix": "conlog",
+        "body": ["console.log('Debug $1')$2"],
+        "description": "Log output to console"
+    },
+    "Debug to console": {
+        "prefix": "debug",
+        "body": ["console.log('Debug $1: ', $1)$2"],
+        "description": "Log output to console"
+    },
+    "test case iteration": {
+        "prefix": "it",
+        "body": ["it('should $1', ()=>{", " $2", "});"],
+        "description": "Scaffold a test iteration function"
+    },
+    "debug promise resolution": {
+        "prefix": "promisedebug",
+        "body": [
+            ".then((res)=>{console.log('Debug promise resolved with: ', res);return res}).catch((err)=>{console.log('Debug error from promise: ', err)})"
+        ],
+        "description": "debug promise resolution"
+    }
+}
