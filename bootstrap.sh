@@ -18,4 +18,9 @@ source ~/.bash_profile
 
 ./vscodeSymlinksMac.sh
 
+echo generating deno completions 
+
+deno completions bash > /usr/local/etc/bash_completion.d/deno.bash
+
 echo Remember to copy you environment variables into .profile
+

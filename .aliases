@@ -52,4 +52,10 @@ alias yi="yarn install"
 alias ya="yarn add"
 
 # git
-alias gpup="git push --set-upstream origin $(git branch --show-current)"
+alias gpup="git push --set-upstream origin $(git branch --show-current) -o merge-request.create -o merge_request.remove_source_branch"
+
+# TM
+alias format="npm run codingrules-fix"
+
+# Lerna
+alias lvp="lerna version patch"
