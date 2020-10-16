@@ -1,3 +1,7 @@
+# always expect to be in a node project
 export PATH="./node_modules/bin:$PATH"
+
+# add default python user script libraries
+export PATH="~/.local/bin:$PATH"
 
 #export PATH="/usr/local/lib/node_modules/bin:$PATH"

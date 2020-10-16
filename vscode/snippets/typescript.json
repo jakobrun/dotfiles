@@ -17,7 +17,7 @@
     "Map value": {
         "prefix": "maplog",
         "body": [
-            "console.log('Debug property of $1:', $1.map(obj=>obj.$2).join('$3'))"
+            "console.log('Debug $2 of $1:', $1.map(obj=>obj.$2).join('$3'))"
         ],
         "description": "log property of objects in array"
     },
