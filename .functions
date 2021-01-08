@@ -58,3 +58,23 @@ function flushDns() {
 # code . -- opens current directory in Visual Studio Code
 # code somefile -- opens somefile in Visual Studio Code
 code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
+
+function kgpods() {
+	kubectl get pods | grep $1
+}
+
+function kgservices() {
+	kubectl get services | grep $1
+}
+
+function kgdeployments() {
+	kubectl get deployments | grep $1
+}
+
+function kgingress() {
+	kubectl get ingress | grep $1
+}
+
+function kgsecrets() {
+	kubectl get secretes | grep $1
+}
