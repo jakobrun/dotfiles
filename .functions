@@ -76,5 +76,5 @@ function kgingress() {
 }
 
 function kgsecrets() {
-	kubectl get secretes | grep $1
+	kubectl get secrets | grep $1
 }
